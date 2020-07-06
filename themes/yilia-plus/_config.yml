@@ -116,11 +116,11 @@ disqus: false
 # 关于如何集成:https://www.jianshu.com/p/ac7658cc912f
 gitment_owner: false      #你的 GitHub ID
 # 是否使用官方js(false可以提升访问速度，本地修改过一部分的js，官方js可能会出现服务器不稳定，不太建议使用)
-gitment_remote: false
-gitment_repo: ''          #存储评论的 repo name(需要在Github创建)
+gitment_remote: true
+gitment_repo: 'hexo-blog-html'          #存储评论的 repo name(需要在Github创建)
 gitment_oauth:
-  client_id: ''           #client ID
-  client_secret: ''       #client secret
+  client_id: 'a96c1339273edc32f8d6'           #client ID
+  client_secret: '0c7e14d5bcb22e765077fd0ffcec3d189cb964b1'       #client secret
 
 # 4、Giteement----【国内用户建议使用这个，相对比较快】
 # 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
@@ -199,8 +199,8 @@ apple_touch_icon: false
 # Tab Title Change | 标签页标题切换
 tab_title_change:
   enable: true
-  left_tab_title: '(つェ⊂) 我藏好了哦~ '
-  return_tab_title: '(*´∇｀*) 被你发现啦~ '
+  left_tab_title: '(つェ⊂)'
+  return_tab_title: '(*´∇｀*)'
 
 # https://github.com/willin/hexo-wordcount
 # 是否开启字数统计(关闭请设置enable为false)
@@ -213,7 +213,7 @@ word_count:
 # 文字输入特效
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
+  enable: false
   # 使输入模式丰富多彩
   colorful: true
   # 是否开启摇动
@@ -227,7 +227,7 @@ snow: false
 ## https://github.com/JoeyBling/live2d-widget.js
 live2d:
   # (关闭请设置为false)
-  enable: true
+  enable: false
   # 模型名称(取值请参考：https://github.com/JoeyBling/hexo-theme-yilia-plus/wiki/live2d%E6%A8%A1%E5%9E%8B%E5%8C%85%E5%B1%95%E7%A4%BA)
   model: hijiki
   display:
