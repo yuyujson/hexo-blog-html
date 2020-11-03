@@ -1,22 +1,30 @@
 language: node_js
-sudo: required
 node_js:
-- 7.9.0
+  - lts/*
+
 cache:
   directories:
-  - node_modules
+    - node_modules
+
 before_install:
-- openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv
-  -in id_rsa.enc -out id_rsa -d
-- npm install -g hexo-cli
+  - export TZ='Asia/Shanghai'
+
 install:
-- npm install
-- npm install hexo-deployer-git --save
+  - npm install hexo-cli -g
+  - npm install
+
 script:
-- hexo clean
-- hexo generate
+  - hexo g
+
 after_script:
-- git config user.name "yuyu"
-- git config user.email "yuy9501@126.com"
-- sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-- hexo deploy
+  - cd ./public
+  - git init
+  - git config user.name "yuyu"
+  - git config user.email "yuy9501@126.com"
+  - git add .
+  - git commit -m "Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches:
+  only:
+    - master

@@ -106,7 +106,7 @@ theme: yilia-plus
 
 deploy:
     type: git
-    repo: https://gh_token@github.com/yuyujson/hexoBlog.git
+    repo: git@github.com:yuyujson/hexoBlog.git
     # repo: git@github.com:yuyujson/hexoBlog.git
     branch: master
     # message:
@@ -142,3 +142,4 @@ heading_index:
   connector: "."
   global_prefix: ""
   global_suffix: ". "
+#18d20eba936878b69b6d23b2a8ad89a5e561eefa
