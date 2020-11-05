@@ -1,21 +1,29 @@
 language: node_js
+# 配置版本号 lts/* 为最新版本, 我的项目只支持11.*
+# 官网文档链接为 https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
 node_js:
   - 11
 
+# 配置缓存
 cache:
   directories:
     - node_modules
 
+# 配置时区
 before_install:
   - export TZ='Asia/Shanghai'
 
+# 在环境安装好之后执行命令来生成静态文件
 install:
   - npm install hexo-cli -g
   - npm install
 
+# 生产静态文件
 script:
   - hexo g
 
+# 通过如下格式的 url 访问来保证对仓库有操作权：https://your-gitHub-personal-access-token@your-repo-url。
+# 由于我们前面把 GitHub Personal Access Token 和 GitHub Pages 仓库链接都写进了环境变量，所以直接通过环境变量引用就行了
 after_script:
   - cd ./public
   - git init
@@ -25,6 +33,7 @@ after_script:
   - git commit -m "Travis CI Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
+# 如果博客备份仓库有多个分支的话，我们需要设置一下 Travis CI 监控哪一个分支的变动
 branches:
   only:
     - master
