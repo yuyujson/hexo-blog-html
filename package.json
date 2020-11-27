@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "yuque-hexo clean && yuque-hexo sync && hexo clean && hexo generate",
+    "sync": "yuque-hexo sync",
+    "clean:yuque": "yuque-hexo clean",
+    "deploy": "npm run sync && hexo clean && hexo g -d",
     "build": "hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
     "server": "hexo server"
   },
   "hexo": {
@@ -30,10 +31,10 @@
   },
   "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
-    "login": "https://www.yuque.com",
+    "login": "yuyu1995",
     "repo": "blog",
     "mdNameFormat": "title",
-    "postPath": "source/_posts",
+    "postPath": "source/_posts/yuque",
     "onlyPublished": false
   }
 }
