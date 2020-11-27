@@ -27,6 +27,8 @@ categories: spring源码
 private final Map<String, String> aliasMap = new ConcurrentHashMap<>(16);
 ```
 
+<!--more-->
+
 ### 注册别名
 
 ```java

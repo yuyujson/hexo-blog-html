@@ -10,7 +10,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "4.0.0"
+    "version": "4.2.1"
   },
   "dependencies": {
     "hexo": "^4.0.0",
@@ -27,8 +27,8 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0"
-  }
-    "yuqueConfig": {
+  },
+  "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "https://www.yuque.com",
     "repo": "blog",
