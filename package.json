@@ -5,7 +5,7 @@
   "scripts": {
     "sync": "yuque-hexo sync",
     "clean:yuque": "yuque-hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "npm run sync && hexo clean && hexo g -d",
     "build": "hexo generate",
     "clean": "hexo clean",
     "server": "hexo server"
